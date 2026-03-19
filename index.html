@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lingo Pro</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+  background: radial-gradient(circle at top,#1e293b,#020617);
+  color:white;
+}
+
+/* NAV */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+}
+
+.logo{font-weight:800;}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.owl{
+  width:110px;
+  border-radius:25px;
+  margin-bottom:20px;
+  animation:float 3s ease-in-out infinite;
+  box-shadow:0 0 40px rgba(34,197,94,0.4);
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+.hero h1{
+  font-size:60px;
+  background:linear-gradient(90deg,#22c55e,#4ade80);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{color:#94a3b8;margin-top:10px;}
+
+.btn{
+  margin-top:20px;
+  padding:12px 22px;
+  border:none;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.btn-primary{background:#22c55e;color:black;}
+.btn-secondary{background:#1e293b;color:white;}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:40px;
+}
+
+.card{
+  background:rgba(30,41,59,0.6);
+  padding:20px;
+  border-radius:15px;
+  transition:.3s;
+}
+
+.card:hover{transform:translateY(-5px);}
+
+/* SCREEN SECTION */
+.phone-section{
+  text-align:center;
+  margin-top:60px;
+}
+
+/* THEME SWITCH */
+.theme-switch{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:20px;
+}
+
+.theme-switch button{
+  width:16px;
+  height:16px;
+  border:none;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+/* DESKTOP GRID */
+.desktop-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  max-width:900px;
+  margin:40px auto;
+}
+
+.desktop-grid img{
+  width:100%;
+  border-radius:20px;
+  border:2px solid #334155;
+  transition:.3s;
+}
+
+.desktop-grid img:hover{
+  transform:scale(1.05);
+}
+
+/* MOBILE PHONE */
+.phone{
+  width:260px;
+  height:520px;
+  margin:30px auto;
+  border-radius:40px;
+  border:2px solid #334155;
+  overflow:hidden;
+  display:none;
+}
+
+.slides{
+  display:flex;
+  width:100%;
+  height:100%;
+  transition:.5s;
+}
+
+.slide{min-width:100%;}
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* DOTS */
+.dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  background:#64748b;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.dot.active{background:#22c55e;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .desktop-grid{display:none;}
+  .phone{display:block;}
+}
+
+@media(min-width:769px){
+  .phone,.dots{display:none;}
+}
+
+/* PRICING */
+.pricing{
+  text-align:center;
+  margin-top:80px;
+}
+
+.price-box{
+  display:inline-block;
+  padding:30px;
+  background:rgba(30,41,59,0.6);
+  border-radius:20px;
+}
+
+.price{
+  font-size:40px;
+  color:#22c55e;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  margin:60px 0;
+  color:#64748b;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">🦉 Lingo</div>
+  <button class="btn btn-primary">Download</button>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="img/Appicon.png" class="owl">
+  <h1>Lingo Pro</h1>
+  <p>Lerne Sprachen schneller als je zuvor.</p>
+
+  <button class="btn btn-primary">Jetzt starten</button>
+  <button class="btn btn-secondary">Mehr erfahren</button>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="card"><h3>🧠 Smart Learning</h3><p>Themenbasiert lernen</p></div>
+  <div class="card"><h3>⚡ Quick Sessions</h3><p>Lerne in Sekunden</p></div>
+  <div class="card"><h3>🔄 Sync</h3><p>Cloud Fortschritt</p></div>
+  <div class="card"><h3>📊 Stats</h3><p>Tracke deinen Progress</p></div>
+</section>
+
+<!-- SCREEN SECTION -->
+<section class="phone-section">
+  <h2>So fühlt sich Lingo an</h2>
+
+  <div class="theme-switch">
+    <button onclick="setTheme('blue')" style="background:#3b82f6"></button>
+    <button onclick="setTheme('orange')" style="background:#f97316"></button>
+    <button onclick="setTheme('green')" style="background:#22c55e"></button>
+  </div>
+
+  <div class="desktop-grid" id="desktopGrid"></div>
+
+  <div class="phone">
+    <div class="slides" id="slides"></div>
+  </div>
+
+  <div class="dots" id="dots"></div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="price-box">
+    <h2>Lingo Pro</h2>
+    <div class="price">€4.99</div>
+    <p>pro Monat</p>
+    <br>
+    <p>✔ Unlimited Learning<br>✔ Alle Inhalte<br>✔ Premium Stats</p>
+    <br>
+    <button class="btn btn-primary">Upgrade starten</button>
+  </div>
+</section>
+
+<footer>© 2026 Lingo</footer>
+
+<script>
+const themes={
+  blue:["img/blue/BLUE1.png","img/blue/BLUE2.png","img/blue/BLUE3.png","img/blue/BLUE4.png"],
+  orange:["img/orange/ORANGE1.png","img/orange/ORANGE2.png","img/orange/ORANGE3.png","img/orange/ORANGE4.png"],
+  green:["img/green/GREEN1.png","img/green/GREEN2.png","img/green/GREEN3.png","img/green/GREEN4.png"]
+};
+
+let currentTheme="green";
+let index=0;
+
+const slides=document.getElementById("slides");
+const dotsContainer=document.getElementById("dots");
+const desktopGrid=document.getElementById("desktopGrid");
+
+function loadTheme(theme){
+  currentTheme=theme;
+  index=0;
+
+  desktopGrid.innerHTML="";
+  themes[theme].forEach(img=>{
+    const image=document.createElement("img");
+    image.src=img;
+    desktopGrid.appendChild(image);
+  });
+
+  slides.innerHTML="";
+  dotsContainer.innerHTML="";
+
+  themes[theme].forEach((img,i)=>{
+    const slide=document.createElement("div");
+    slide.className="slide";
+
+    const image=document.createElement("img");
+    image.src=img;
+
+    slide.appendChild(image);
+    slides.appendChild(slide);
+
+    const dot=document.createElement("div");
+    dot.className="dot";
+    if(i===0) dot.classList.add("active");
+
+    dot.onclick=()=>goToSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+}
+
+function updateDots(){
+  document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
+  document.querySelectorAll(".dot")[index].classList.add("active");
+}
+
+function goToSlide(i){
+  index=i;
+  slides.style.transform="translateX(-"+(i*100)+"%)";
+  updateDots();
+}
+
+function setTheme(theme){
+  loadTheme(theme);
+}
+
+setInterval(()=>{
+  const keys=Object.keys(themes);
+  let i=keys.indexOf(currentTheme);
+  i=(i+1)%keys.length;
+  loadTheme(keys[i]);
+},8000);
+
+setInterval(()=>{
+  index=(index+1)%themes[currentTheme].length;
+  goToSlide(index);
+},3000);
+
+loadTheme(currentTheme);
+</script>
+
+</body>
+</html>
