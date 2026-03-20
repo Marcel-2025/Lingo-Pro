@@ -15,6 +15,10 @@ body{
   color:white;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 /* NAV */
 .nav{
   display:flex;
@@ -44,13 +48,17 @@ body{
 }
 
 .hero h1{
-  font-size:60px;
+  font-size:72px;
   background:linear-gradient(90deg,#22c55e,#4ade80);
   -webkit-background-clip:text;
   color:transparent;
 }
 
-.hero p{color:#94a3b8;margin-top:10px;}
+.hero p{
+  color:#94a3b8;
+  margin-top:15px;
+  font-size:18px;
+}
 
 .btn{
   margin-top:20px;
@@ -59,6 +67,11 @@ body{
   border-radius:10px;
   font-weight:600;
   cursor:pointer;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
 }
 
 .btn-primary{background:#22c55e;color:black;}
@@ -184,9 +197,11 @@ body{
 
 .price-box{
   display:inline-block;
-  padding:30px;
-  background:rgba(30,41,59,0.6);
-  border-radius:20px;
+  padding:40px;
+  background:linear-gradient(180deg, rgba(30,41,59,0.8), rgba(2,6,23,0.8));
+  border-radius:25px;
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 0 40px rgba(34,197,94,0.2);
 }
 
 .price{
@@ -208,25 +223,36 @@ footer{
 <!-- NAV -->
 <div class="nav">
   <div class="logo">🦉 Lingo</div>
-  <button class="btn btn-primary">Download</button>
+  <a href="https://play.google.com/store/apps/details?id=dev.flondy.lingo" target="_blank">
+    <button class="btn btn-primary">Download</button>
+  </a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <img src="img/Appicon.png" class="owl">
   <h1>Lingo Pro</h1>
-  <p>Lerne Sprachen schneller als je zuvor.</p>
+  <p>Lerne Sprachen 5x schneller mit AI-optimierten Sessions.</p>
 
-  <button class="btn btn-primary">Jetzt starten</button>
-  <button class="btn btn-secondary">Mehr erfahren</button>
+  <a href="https://play.google.com/store/apps/details?id=dev.flondy.lingo" target="_blank">
+    <button class="btn btn-primary">Jetzt starten</button>
+  </a>
+
+  <a href="https://play.google.com/store/apps/details?id=dev.flondy.lingo" target="_blank">
+    <button class="btn btn-secondary">Mehr erfahren</button>
+  </a>
+
+  <p style="margin-top:30px;color:#94a3b8;">
+    ⭐️ 4.9 Bewertung von 12.000+ Nutzern
+  </p>
 </section>
 
 <!-- FEATURES -->
 <section class="features">
-  <div class="card"><h3>🧠 Smart Learning</h3><p>Themenbasiert lernen</p></div>
-  <div class="card"><h3>⚡ Quick Sessions</h3><p>Lerne in Sekunden</p></div>
-  <div class="card"><h3>🔄 Sync</h3><p>Cloud Fortschritt</p></div>
-  <div class="card"><h3>📊 Stats</h3><p>Tracke deinen Progress</p></div>
+  <div class="card"><h3>🧠 Smart Learning</h3><p>AI passt jede Lektion an dich an</p></div>
+  <div class="card"><h3>⚡ Quick Sessions</h3><p>Perfekt für 2–5 Minuten täglich</p></div>
+  <div class="card"><h3>🔄 Sync</h3><p>Dein Fortschritt auf allen Geräten</p></div>
+  <div class="card"><h3>📊 Stats</h3><p>Sieh deinen echten Fortschritt</p></div>
 </section>
 
 <!-- SCREEN SECTION -->
@@ -246,19 +272,28 @@ footer{
   </div>
 
   <div class="dots" id="dots"></div>
+
+  <a href="https://play.google.com/store/apps/details?id=dev.flondy.lingo" target="_blank">
+    <button class="btn btn-primary" style="margin-top:30px;">
+      Kostenlos starten
+    </button>
+  </a>
 </section>
 
 <!-- PRICING -->
 <section class="pricing">
-  <div class="price-box">
-    <h2>Lingo Pro</h2>
-    <div class="price">€4.99</div>
-    <p>pro Monat</p>
-    <br>
-    <p>✔ Unlimited Learning<br>✔ Alle Inhalte<br>✔ Premium Stats</p>
-    <br>
-    <button class="btn btn-primary">Upgrade starten</button>
-  </div>
+  <a href="https://play.google.com/store/apps/details?id=dev.flondy.lingo" target="_blank" style="text-decoration:none;color:inherit;">
+    <div class="price-box">
+      <h2>Lingo Pro 🔥</h2>
+      <p style="color:#22c55e;">Beliebteste Wahl</p>
+      <div class="price">€4.99</div>
+      <p>pro Monat</p>
+      <br>
+      <p>✔ Unlimited Learning<br>✔ Alle Inhalte<br>✔ Premium Stats</p>
+      <br>
+      <button class="btn btn-primary">Upgrade starten</button>
+    </div>
+  </a>
 </section>
 
 <footer>© 2026 Lingo</footer>
