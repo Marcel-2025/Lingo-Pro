@@ -16,8 +16,11 @@ Version tatsächlich eingebunden sind, wurde NICHT überprüft. Ebenso ist die
 Wirksamkeit einer Account-Löschung noch nicht verifiziert.
 
 VOR EINER VERÖFFENTLICHUNG VERBINDLICH PRÜFEN:
-[ ] In privacy.html und impressum.html vollständigen rechtsverantwortlichen Namen
-    und ladungsfähige Anschrift eintragen (Platzhalter suchen: [).
+[x] Adresse und angegebener Name (Marcel S. / Flondy) sind in
+    privacy.html und impressum.html auf Deutsch und Englisch eingetragen.
+[ ] Vor Veröffentlichung überprüfen, ob „Marcel S.“ durch den vollständigen
+    bürgerlichen Namen ersetzt werden muss. Nur die Initiale ist für
+    rechtliche Anbieterangaben möglicherweise nicht ausreichend.
 [ ] Datenschutzseite gegen tatsächliche Android-App-Version und Firebase-Konfiguration
     prüfen: erfasste Daten, Zwecke, Anbieter, Rechtsgrundlagen, Einwilligung,
     internationale Transfers, Aufbewahrungs-/Backup-Fristen, Deletion, SDKs.
